@@ -1,5 +1,16 @@
-const ShopLayout = ({ children }: { children: React.ReactNode }) => {
-  return <main className="min-h-screen bg-red-400">{children}</main>;
+import { TopMenu } from '@/components/TopMenu';
+
+interface ShopLayoutProps {
+  children: React.ReactNode;
+}
+
+const ShopLayout = ({ children }: ShopLayoutProps) => {
+  return (
+    <div className="min-h-screen">
+      <TopMenu />
+      {children}
+    </div>
+  );
 };
 
 export default ShopLayout;

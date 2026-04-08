@@ -1,11 +1,15 @@
-import { headingFont } from "@/config/fonts";
-import Image from "next/image";
+import { Title } from '@/components/Title';
+import { ProductGrid } from '@/features/products/ProductGrid';
+import { initialData } from '@/seed/seed';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center">
-      Hola mundo
-      <h1 className={headingFont.className}>Home Page</h1>
-    </div>
+    <main className="flex flex-col flex-1 px-4">
+      <Title title="Teslo Store" subtitle="Welcome to the Teslo Store" />
+
+      <ProductGrid products={initialData.products} />
+    </main>
   );
-}
+};
+
+export default Home;
