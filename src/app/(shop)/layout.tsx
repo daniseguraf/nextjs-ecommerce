@@ -1,3 +1,4 @@
+import { SideMenu } from '@/components/SideMenu';
 import { TopMenu } from '@/components/TopMenu';
 
 interface ShopLayoutProps {
@@ -8,6 +9,7 @@ const ShopLayout = ({ children }: ShopLayoutProps) => {
   return (
     <div className="min-h-screen">
       <TopMenu />
+      <SideMenu />
       {children}
     </div>
   );
