@@ -10,7 +10,7 @@ const ShopLayout = ({ children }: ShopLayoutProps) => {
     <div className="min-h-screen">
       <TopMenu />
       <SideMenu />
-      {children}
+      <main className="p-8 mt-2">{children}</main>
     </div>
   );
 };

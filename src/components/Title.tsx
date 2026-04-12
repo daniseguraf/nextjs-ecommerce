@@ -5,12 +5,13 @@ interface TitleProps {
   subtitle?: string;
 }
 
-export const Title = ({ title, subtitle }: TitleProps) => {
+export const PageHeading = ({ title, subtitle }: TitleProps) => {
   return (
-    <div className="flex flex-col gap-2">
-      <h1 className={`${headingFont.className} text-4xl antialiased`}>
+    <div className="flex flex-col gap-12">
+      <h1 className={`${headingFont.className} text-3xl antialiased`}>
         {title}
       </h1>
+
       {subtitle && <p className="text-lg">{subtitle}</p>}
     </div>
   );

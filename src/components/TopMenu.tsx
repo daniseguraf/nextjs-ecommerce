@@ -9,10 +9,10 @@ export const TopMenu = () => {
   const { openSideMenu } = useStore();
 
   return (
-    <nav className="flex justify-between items-center w-full px-5">
+    <nav className="flex justify-between items-center w-full px-8">
       <Link href="/">
-        <span className={`${headingFont.className} antialiased  font-bold`}>
-          Teslo Store
+        <span className={`${headingFont.className} antialiased text-xl`}>
+          Teslo | Store
         </span>
       </Link>
 
@@ -31,7 +31,7 @@ export const TopMenu = () => {
         </Link>
         <Link
           className="m-2 p-2 rounded-md transition-all hover:bg-gray-100"
-          href="/category/kid"
+          href="/category/kids"
         >
           Kids
         </Link>
