@@ -1,20 +1,21 @@
 import Image from 'next/image';
-import { Product } from '../products/product.interfaces';
 import { QuantitySelector } from '../products/components/QuantitySelector';
-import { Button } from '@/components/ui/button';
+
+interface CartItemProps {
+  title: string;
+  price: number;
+  size: string;
+  quantity?: number;
+  image: string;
+}
 
 export const CartItem = ({
   title,
   price,
   size,
   image,
-}: {
-  title: string;
-  price: number;
-  size: string;
-  quantity: number;
-  image: string;
-}) => {
+  quantity,
+}: CartItemProps) => {
   return (
     <article className="flex flex-row bg-white gap-4">
       <Image src={`/products/${image}`} alt={title} width={100} height={100} />
@@ -26,9 +27,9 @@ export const CartItem = ({
         </div>
 
         <p className="text-sm">{size}</p>
-        <QuantitySelector />
+        <QuantitySelector value={quantity ?? 0} />
 
-        <button className="text-sm underline">Remove</button>
+        <button className="text-sm underline cursor-pointer">Remove</button>
       </div>
     </article>
   );

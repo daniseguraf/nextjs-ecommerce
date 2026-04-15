@@ -3,8 +3,12 @@
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 
-export const QuantitySelector = () => {
-  const [quantity, setQuantity] = useState(0);
+interface QuantitySelectorProps {
+  value: number;
+}
+
+export const QuantitySelector = ({ value = 0 }: QuantitySelectorProps) => {
+  const [quantity, setQuantity] = useState(value);
 
   const handleDecrement = () => {
     if (quantity <= 0) return;

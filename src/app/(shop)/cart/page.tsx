@@ -20,12 +20,12 @@ const cartItems = [
 
 const CartPage = () => {
   return (
-    <main className="w-full max-w-5xl mx-auto">
+    <main className="w-full max-w-5xl mx-auto flex flex-col gap-8">
       <PageHeading title="Cart" />
 
-      <div className="grid grid-cols-1 md:grid-cols-7 gap-14 py-4">
+      <div className="grid grid-cols-1 md:grid-cols-7 gap-18 py-4">
         <div className="col-span-4">
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-12">
             {cartItems.map(({ slug, title, price, sizes, images }) => (
               <CartItem
                 key={slug}
