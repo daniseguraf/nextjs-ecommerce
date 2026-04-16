@@ -1,11 +1,20 @@
 import Link from 'next/link';
 
-export const CartSummary = () => {
+export const OrderSummary = () => {
   return (
     <div className="bg-white p-8 rounded shadow-xl flex flex-col gap-4">
       <h3 className="text-2xl font-semibold">Order Summary</h3>
 
       <div className="flex flex-col gap-2">
+        <div className="flex flex-col">
+          <h4 className="text-md font-semibold mb-1">Delivery Address</h4>
+          <span className="text-sm">John Doe</span>
+          <span className="text-sm">123 Main St</span>
+          <span className="text-sm">Anytown, USA</span>
+        </div>
+
+        <div className="w-full h-0.5 bg-gray-200 my-2" />
+
         <div className="flex items-center justify-between">
           <span className="text-sm">No. of products:</span>
           <span className="text-sm">6</span>

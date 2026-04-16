@@ -1,6 +1,6 @@
 import { PageHeading } from '@/components/Title';
 import { CartItem } from '@/features/cart/CartItem';
-import { CartSummary } from '@/features/cart/CartSummary';
+import { OrderSummary } from '@/features/cart/OrderSummary';
 import { initialData } from '@/seed/seed';
 import { Metadata } from 'next';
 
@@ -39,7 +39,7 @@ const CartPage = () => {
         </div>
 
         <div className="col-span-3">
-          <CartSummary />
+          <OrderSummary />
         </div>
       </div>
     </main>
