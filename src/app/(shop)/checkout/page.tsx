@@ -46,7 +46,7 @@ const CheckoutPage = () => {
         </div>
 
         <div className="col-span-3">
-          <OrderSummary />
+          <OrderSummary btnText="Send Order" btnLink="/orders/123" />
         </div>
       </div>
     </main>

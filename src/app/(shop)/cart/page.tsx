@@ -1,8 +1,10 @@
 import { PageHeading } from '@/components/Title';
 import { CartItem } from '@/features/cart/CartItem';
 import { OrderSummary } from '@/features/cart/OrderSummary';
+import { Product } from '@/features/products/product.interfaces';
 import { initialData } from '@/seed/seed';
 import { Metadata } from 'next';
+import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {
   title: 'Teslo Shop | Your Cart',
@@ -18,7 +20,15 @@ const cartItems = [
   initialData.products[5],
 ];
 
+// const cartItems: Product[] = [];
+
 const CartPage = () => {
+  const isEmpty = cartItems.length === 0;
+
+  if (isEmpty) {
+    redirect('/empty');
+  }
+
   return (
     <main className="w-full max-w-5xl mx-auto flex flex-col gap-8">
       <PageHeading title="Cart" />
@@ -39,7 +49,7 @@ const CartPage = () => {
         </div>
 
         <div className="col-span-3">
-          <OrderSummary />
+          <OrderSummary btnText="Checkout" btnLink="/checkout/address" />
         </div>
       </div>
     </main>
