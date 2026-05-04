@@ -1,6 +1,6 @@
 import { PageHeading } from '@/components/Title';
 import { ProductGrid } from '@/features/products/ProductGrid';
-import { initialData } from '@/seed/seed';
+import { initialData } from '@/seed/initialData';
 
 const Home = () => {
   return (

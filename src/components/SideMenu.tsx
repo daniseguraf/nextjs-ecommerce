@@ -2,10 +2,7 @@
 
 import {
   Drawer,
-  DrawerClose,
   DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
 } from '@/components/ui/drawer';
@@ -31,8 +28,7 @@ export const SideMenu = () => {
     >
       <DrawerContent>
         <DrawerHeader>
-          <DrawerTitle>Move Goal</DrawerTitle>
-          <DrawerDescription>Set your daily activity goal.</DrawerDescription>
+          <DrawerTitle>Menu</DrawerTitle>
           <IoCloseOutline
             size={50}
             className="absolute top-5 right-5 cursor-pointer text-gray-600"

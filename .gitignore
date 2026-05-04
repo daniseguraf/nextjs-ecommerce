@@ -12,6 +12,10 @@
 
 # testing
 /coverage
+/.nyc_output
+/test-results/
+/playwright-report/
+/playwright/.cache/
 
 # next.js
 /.next/
@@ -22,6 +26,12 @@
 
 # misc
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 *.pem
 
 # debug
@@ -32,6 +42,8 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+!.env.template
 
 # vercel
 .vercel
@@ -40,5 +52,39 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Project specific
 /postgres/
-/src/generated/prisma
+
+# Prisma
+/src/generated/
+*.db
+*.db-journal
+
+# IDEs
+/.idea
+/.vscode/*
+!/.vscode/settings.json
+!/.vscode/tasks.json
+!/.vscode/launch.json
+!/.vscode/extensions.json
+*.swp
+*.swo
+*~
+
+# Cache
+.cache
+.parcel-cache
+.eslintcache
+.stylelintcache
+# Temporal
+*.tmp
+*.temp
+# Sensitive
+*.key
+*.cert
+*.crt
+*.csr
+*.p12
+*.pfx
+secrets.json
+credentials.json
