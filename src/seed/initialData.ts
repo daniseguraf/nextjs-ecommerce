@@ -3,19 +3,20 @@ interface SeedProduct {
   images: string[];
   inStock: number;
   price: number;
-  sizes: ValidSizes[];
+  sizes: SeedSize[];
   slug: string;
   tags: string[];
   title: string;
-  type: ValidTypes;
+  type: SeedCategory;
   gender: 'men' | 'women' | 'kids' | 'unisex';
 }
 
-type ValidSizes = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL';
-type ValidTypes = 'shirts' | 'pants' | 'hoodies' | 'hats';
+export type SeedSize = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL';
+export type SeedCategory = 'shirts' | 'pants' | 'hoodies' | 'hats';
+export type SeedGender = 'men' | 'women' | 'kids' | 'unisex';
 
 interface SeedData {
-  categories: ValidTypes[];
+  categories: SeedCategory[];
   products: SeedProduct[];
 }
 
