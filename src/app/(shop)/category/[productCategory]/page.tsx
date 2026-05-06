@@ -1,16 +1,16 @@
 import { PageHeading } from '@/components/Title';
-import { Genders } from '@/features/products/product.interfaces';
+import { Gender } from '@/features/products/product.interfaces';
 import { ProductGrid } from '@/features/products/ProductGrid';
-import { initialData } from '@/seed/seed';
+import { getAllProducts } from '@/services/product.services';
 import { notFound } from 'next/navigation';
 
 interface CategoryPageProps {
   params: {
-    productCategory: Genders;
+    productCategory: Gender;
   };
 }
 
-const categoryTitles: Record<Genders, string> = {
+const categoryTitles: Record<Gender, string> = {
   men: 'Men',
   women: 'Women',
   kids: 'Kids',
@@ -24,7 +24,9 @@ const CategoryPage = async ({ params }: CategoryPageProps) => {
     notFound();
   }
 
-  const categoryProducts = initialData.products.filter(
+  const productsFromAPI = await getAllProducts();
+
+  const categoryProducts = productsFromAPI.filter(
     (product) => product.gender === productCategory
   );
 

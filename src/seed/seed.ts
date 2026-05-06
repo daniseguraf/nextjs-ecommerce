@@ -1,7 +1,7 @@
 import 'dotenv/config';
 
 import prisma from '@/lib/prisma';
-import { initialData, SeedCategory, SeedGender } from './initialData';
+import { initialData, SeedCategory } from './initialData';
 
 export const main = async () => {
   // Delete all existing data
