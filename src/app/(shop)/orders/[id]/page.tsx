@@ -1,10 +1,10 @@
 import { PageHeading } from '@/components/Title';
 import { OrderSummary } from '@/features/cart/OrderSummary';
 import { CheckoutItem } from '@/features/cart/CheckoutItem';
-import { initialData } from '@/seed/seed';
 import { Metadata } from 'next';
 import { cn } from '@/lib/utils';
 import { IoCardOutline } from 'react-icons/io5';
+import { initialData } from '@/seed/initialData';
 
 const cartItems = [
   initialData.products[0],

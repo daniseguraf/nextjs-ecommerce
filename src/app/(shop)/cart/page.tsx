@@ -1,8 +1,7 @@
 import { PageHeading } from '@/components/Title';
 import { CartItem } from '@/features/cart/CartItem';
 import { OrderSummary } from '@/features/cart/OrderSummary';
-import { Product } from '@/features/products/product.interfaces';
-import { initialData } from '@/seed/seed';
+import { initialData } from '@/seed/initialData';
 import { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 

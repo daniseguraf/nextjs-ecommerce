@@ -1,9 +1,9 @@
 import { PageHeading } from '@/components/Title';
 import { OrderSummary } from '@/features/cart/OrderSummary';
 import { CheckoutItem } from '@/features/cart/CheckoutItem';
-import { initialData } from '@/seed/seed';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { initialData } from '@/seed/initialData';
 
 export const metadata: Metadata = {
   title: 'Teslo Shop | Your Cart',

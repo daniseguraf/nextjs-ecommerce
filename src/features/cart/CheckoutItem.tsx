@@ -6,6 +6,7 @@ interface CartItemProps {
   price: number;
   quantity?: number;
   image: string;
+  size: string;
 }
 
 export const CheckoutItem = ({

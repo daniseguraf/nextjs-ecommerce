@@ -4,7 +4,7 @@ import { Description } from '@/features/products/components/Description';
 import { QuantitySelector } from '@/features/products/components/QuantitySelector';
 import { SizeSelector } from '@/features/products/components/SizeSelector';
 import { Product } from '@/features/products/product.interfaces';
-import { initialData } from '@/seed/seed';
+import { initialData } from '@/seed/initialData';
 import { notFound } from 'next/navigation';
 
 interface ProductPageProps {
@@ -23,8 +23,6 @@ const ProductPage = async ({ params }: ProductPageProps) => {
   if (!product) notFound();
 
   const { title, description, price, sizes, images } = product;
-
-  console.log('product', product);
 
   return (
     <main className="grid grid-cols-1 md:grid-cols-3 gap-4">
